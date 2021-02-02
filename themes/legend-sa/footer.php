@@ -91,7 +91,7 @@
 					<a href="" >Privacy Policy</a>
 				</div>
 				<div class="copyright">
-					<p>© 2021 Legend SA - Developed by <a href="www.ariellebosshard.com">Boss.Arielle</a> and <a href="">Gabriel Nogueira</a>
+					<p>© 2021 Legend SA - Developed by <a href="www.bossarielle.com">Boss.Arielle</a> and <a href="https://www.behance.net/gabrielcnog">Gabriel Nogueira</a>
 				</div>
 				<div class=footer-sm-menu>
 					<nav class="social-media-navigation sm-nav" role="navigation">
