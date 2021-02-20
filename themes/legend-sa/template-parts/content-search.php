@@ -10,26 +10,24 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+	<div class="entry-featured-img">
+		<?php legend_sa_post_thumbnail(); ?>
+	</div>
+	<div class="entry-text">
+		<div class="entry-heading">
+			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			legend_sa_posted_on();
-			legend_sa_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+			<?php if ( 'post' === get_post_type() ) : ?>
+			
+			<?php endif; ?>
+		</div><!-- .entry-heading -->
+		<div class="entry-content">
+			<?php the_excerpt(); ?>
+			<a href="<?php the_permalink() ?>">
+				<p class=blog-btn>Learn More<p>
+			</a>
+		</div><!-- .entry-content -->
+	</div><!-- .entry-text -->
 
-	<?php legend_sa_post_thumbnail(); ?>
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php legend_sa_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	
 </article><!-- #post-<?php the_ID(); ?> -->

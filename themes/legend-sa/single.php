@@ -34,14 +34,14 @@ get_header();
 								<?php the_post_thumbnail(); ?>	
 								<h3><?php the_title(); ?></h3>							
 								<p><?php the_excerpt(); ?></p>
-								<p class=blog-btn>Learn More><p>
+								<p class=blog-btn>Learn More ><p>
 							</a></li>
 						<?php endwhile; ?>
 					<?php wp_reset_query(); ?>
 				</ul>
 			</div>
 			<p class="to-blog-btn">
-            <a href="http://legend-sa.local/blog/" data-type="page" data-id="77">More Blog Content&gt;</a>
+            <a href="/blog/" data-type="page">More Blog Content &gt;</a>
 			</p>
 		</section>
 

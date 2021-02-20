@@ -32,7 +32,7 @@
 		<div class="header-content full-width">
 			<div class="site-branding">
 			<a href="<?php echo site_url(); ?>" class="top-logo">
-				<img src="http://legend-sa.local/wp-content/uploads/2021/01/cropped-legend-logo-white.png" alt="Legend Logo White"> </a>
+				<img src="http://legend-sa.local/wp-content/uploads/2021/01/legend-logo-white.png" alt="Legend Logo White"> </a>
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation">
@@ -53,33 +53,14 @@
 				?>
 			</nav><!-- #site-navigation -->
 			<nav class="social-media-navigation sm-nav" role="navigation">
-			<ul>
-				<li>
-					<a href="https://www.linkedin.com/company/18901679">
-						<img src="http://legend-sa.local/wp-content/uploads/2021/01/linkedin.png" alt="linkedin icon">
-					</a>
-				</li>
-				<li>
-					<a href="https://www.youtube.com/channel/UClM2B6xCEEQ3MAbJ0oUoBYw">
-						<img src="http://legend-sa.local/wp-content/uploads/2021/01/youtube.png" alt="youtube icon">
-					</a>
-				</li>
-				<li>
-					<a href="https://www.instagram.com/legendsaofficial/?hl=en">
-						<img src="http://legend-sa.local/wp-content/uploads/2021/01/instagram.png" alt="instagram icon">
-					</a>
-				</li>
-				<li>
-					<a href="https://twitter.com/search?q=%40legendsaofcl&amp;src=recent_search_click">
-						<img src="http://legend-sa.local/wp-content/uploads/2021/01/twitter.png" alt="twitter icon">
-					</a>
-				</li>
-				<li>
-					<a href="https://www.facebook.com/LegendSAOfficial?_rdc=2&amp;_rdr">
-						<img src="http://legend-sa.local/wp-content/uploads/2021/01/facebook.png" alt="facebook icon">
-					</a>
-				</li>
-			</ul>
+				<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-2',
+							'menu_id'        => 'sm-menu',
+						)
+					);
+				?>
 			</nav><!-- #social media navigation -->
 		</div>
 	</header><!-- #masthead -->

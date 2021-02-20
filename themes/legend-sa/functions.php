@@ -51,6 +51,7 @@ if ( ! function_exists( 'legend_sa_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'legend-sa' ),
+				'menu-2' => esc_html__( 'SocialMedia', 'legend-sa' ),
 			)
 		);
 	// Register Navigation Menus
@@ -190,10 +191,11 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-remove_filter('the_content', 'wpautop'); 
+
+/* Remove automatic gt block spacing */
+remove_filter('the_content', 'shortcode_unautop'); 
 remove_filter('the_excerpt', 'wpautop');
 
-add_filter('wp_generate_tag_cloud', 'na_tag_cloud',10,1);
 
 /* Excerpt Length */
 function mytheme_custom_excerpt_length( $length ) {

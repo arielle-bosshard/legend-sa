@@ -30,18 +30,22 @@ get_header();
 				<ul>
 					<?php query_posts('posts_per_page=4'); ?>
 						<?php while ( have_posts() ) : the_post(); ?>
-							<li><a href="<?php the_permalink() ?>">
-								<?php the_post_thumbnail(); ?>	
-								<h3><?php the_title(); ?></h3>							
-								<p><?php the_excerpt(); ?></p>
-								<p class=blog-btn>Learn More><p>
-							</a></li>
+							<li>
+								<a href="<?php the_permalink() ?>">
+									<div class="featured-image-display">
+										<?php the_post_thumbnail(); ?>
+									</div>
+									<h3><?php the_title(); ?></h3>						
+									<p><?php the_excerpt(); ?></p>
+									<p class=blog-btn>Learn More<p>
+								</a>
+							</li>
 						<?php endwhile; ?>
 					<?php wp_reset_query(); ?>
 				</ul>
 			</div>
 			<p class="to-blog-btn">
-            <a href="http://legend-sa.local/blog/" data-type="page" data-id="77">More Blog Content&gt;</a>
+            <a href="/blog/">More Blog Content</a>
 			</p>
 		</section>
 	</main>

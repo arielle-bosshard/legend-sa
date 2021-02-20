@@ -68,20 +68,4 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
 
-// Get the header
-var aside = document.getElementById("secondary");
-
-// Get the offset position of the navbar
-var sticky = aside.offsetTop;
-
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    aside.classList.add("sticky");
-  } else {
-    aside.classList.remove("sticky");
-  }
-}
