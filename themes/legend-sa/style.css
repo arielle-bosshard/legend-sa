@@ -1243,14 +1243,15 @@ p {
 	background-color: rgba(0, 0, 0, 0.2);
 	position: absolute;
 }
-.r-y54riw {
-    min-width: 200px;
-}
 .twitter-post h3{
 	color: #fff;
 }
 .twitter-post-container {
 	margin: 2em 0 2em auto;
+}
+.twitter-post-container iframe {
+	max-height: 500px;
+    border-radius: 8px;
 }
 
 	/* Blog Posts */
@@ -1422,19 +1423,26 @@ p {
 
 /* About Us Page
 --------------------------------------------- */
+.team, .ecosystem {
+	margin: 1em auto 2em;
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 	.team, .ecosystem {
 		display: flex;
+		justify-content: space-between;
+	}
+	.ecosystem {
+		flex-direction: column;
 	}
 	.about-company {
-		width: 65%;
+		width: 50%;
 		display: flex;
 		flex-direction: column;
 	}
 	.about-team {
-		width: 35%;
+		width: 45%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -1444,8 +1452,16 @@ p {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+	.team{
+		margin-top: 50px;
+	}
+	.about-company {
+		width: 65%;
+	}
+	.about-team {
+		width: 30%;
+	}
 	.ecosystem {
-		display: flex;
 		flex-direction: row-reverse;
 		align-items: center;
 	}
@@ -1458,6 +1474,11 @@ p {
 	.ecosystem-img {
 		display: flex;
     	width: 50%;
+		justify-content: center;
+	}
+	.ecosystem-img img {
+		max-height: 350px;
+		width: auto;
 	}
 }
 /* Blog Archive Page
@@ -1773,18 +1794,19 @@ body.blog .site-main, body.archive .site-main, body.search .site-main {
 }
 .sm-nav ul li {
 	transition: ease 0.3s;
-	width: 2em;
+    width: 2em;
     height: 2em;
-	margin-left: 8px;
-	background-size: contain;
+    margin-left: 8px;
+    background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
+    border-radius: 2px;
 }
 .sm-nav li:hover {
-	transition: ease 0.3s;
-	width: 2em;
-    height: 2em;
 	background-size: contain;
+	background-position: center;
     background-repeat: no-repeat;
+	border-radius: 2px;
 }
 .linkedin {
     background: url('icon/li_white.png');
@@ -1817,7 +1839,9 @@ body.blog .site-main, body.archive .site-main, body.search .site-main {
 	background: url('icon/tt_gold.png');
 }
 .sm-nav ul li a {
-	font-size: 0px;
+	color: transparent;
+	width: 100%;
+    height: 100%;
 }
 /* Medium devices (landscape tablets, 1120px and down) */
 @media only screen and (max-width: 1120px) {
@@ -1890,10 +1914,14 @@ body.blog .site-main, body.archive .site-main, body.search .site-main {
 footer p, footer a, footer h5 {
 	color: #fff;
 }
-footer h5, .contact-pg-link p {
+footer h5 {
 	font-family: 'Montserrat-Bold';
 	font-size: 1em;
 	margin:1em 0 0.5em;
+}
+.contact-pg-link p {
+	font-family: 'Montserrat-Bold';
+	font-size: 1rem;
 }
 footer p, footer li, footer a {
 	font-family: 'Montserrat-reg';
