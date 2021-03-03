@@ -1153,6 +1153,7 @@ p {
 .hero-text .contact-btn {
 	color: #fff;
     background: #cd883b;
+	font-family: 'montserrat-bold';
     font-size: 0.7em;
     padding: 1em;
     border-radius: 8px;
