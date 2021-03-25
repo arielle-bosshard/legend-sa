@@ -15,7 +15,7 @@
 		<div class="site-info">
 			<section class="newsletter-subscription full-width">
 				<div class="newsletter-cta-text">
-					<h5>Always be updated on the industry!</h5>
+					<p class="sml-title">Always be updated on the industry!</p>
 					<p>We will never spam your e-mail box.</p>
 				</div>
 				<div class="newsletter-form"> <!-- Or use plug-in-->
@@ -50,7 +50,7 @@
 					<img src="/wp-content/uploads/2021/01/legend-logo-white.png" alt="legend sa logo">
 				</div>
 				<div class="explore-menu quarter-width">
-					<h5>Explore</h5>
+					<p class="sml-title">Explore</p>
 					<ul>
 						<li>
 							<?php
@@ -65,7 +65,7 @@
 					</ul>
 				</div>
 				<div class="footer-contact-info quarter-width">
-					<h5>Find Us</h5>
+					<p class="sml-title">Find Us</p>
 					<div class="company-contact-display">
 						<img src="/wp-content/uploads/2021/01/location.png" alt="location pin icon">
 						<p>Route de Crassier 7, 1262<br>
@@ -81,7 +81,7 @@
 					</div>
 				</div>
 				<div class="youtube-lastest-vid quarter-width">
-					<h5>Latest Video</h5>
+					<p class="sml-title">Latest Video</p>
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/TWkcj6gKoMk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 			</section>

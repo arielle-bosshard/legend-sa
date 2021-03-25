@@ -2,12 +2,6 @@
 /**
  * The template for displaying all pages
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package legend-sa
  */
@@ -23,8 +17,8 @@ get_header();
 		</div>
 		<section class="recent-posts full-width">				
 			<div class="section-heading">
-				<h1>Industry Updates</h1>
-				<h2>What are the latest relevant subjects?</h2>
+				<h2>Industry Updates</h2>
+				<p class="subtitle">What are the latest relevant subjects?</p>
 			</div>
 			<div class="blog-post">
 				<ul>
@@ -35,7 +29,7 @@ get_header();
 									<div class="featured-image-display">
 										<?php the_post_thumbnail(); ?>
 									</div>
-									<h3><?php the_title(); ?></h3>						
+									<p class="blogtitle"><?php the_title(); ?></p>						
 									<p><?php the_excerpt(); ?></p>
 									<p class=blog-btn>Learn More<p>
 								</a>

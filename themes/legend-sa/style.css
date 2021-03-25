@@ -1077,18 +1077,21 @@ body.single .site-main {
 
 /* Pages - Mobile Generic Formatting
 --------------------------------------------- */
-h1 {
+h1, h2 {
 	font-size: 1.5em;
 	line-height: 1.125em;
 	text-transform: uppercase;
 }
-h2 {
-	font-size: 1em;
-	line-height: 1.125em;
+.subtitle {
+	font-size: 0.8em;
+	line-height: 1em;
+	font-family: 'montserrat-bold';
 }
-h3 {
-	font-size: 1.25em;
+.service-title, .sh, .blogtitle {
+	font-size: 1em;
 	margin: 16px 0 4px 0;
+	font-family: 'montserrat-bold';
+	text-transform: capitalize;
 }
 p {
 	font-size: 0.875em;
@@ -1106,17 +1109,16 @@ p {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-	h1 {
+	h1, h2 {
 		font-size: 1.75em;
 		line-height: 1.25em;
-		text-transform: uppercase;
 	}
-	h2 {
-		font-size: 1.25em;
-		line-height: 1.25em;
+	.subtitle {
+		font-size: 1em;
+		line-height: 1.2em;
 	}
-	h3 {
-		font-size: 1.375em;
+	.service-title, .sh {
+		font-size: 1.2em;
 		margin: 8px 0 12px 0;
 	}
 	p {
@@ -1229,8 +1231,8 @@ p {
 .company:hover {
 	color: #BB782F;
 }
-	/*Twitter Update */
-.twitter-post {
+	/*SM Post Update */
+.latestsm-post {
     width: 100%;
 	margin-top: 20px;
 	background: url(img/twitter-bkg.jpg) no-repeat;
@@ -1240,23 +1242,23 @@ p {
     display: flex;
 	align-items: center;
 }
-.twitter-post::after {
+.latestsm-post::after {
 	background-color: rgba(0, 0, 0, 0.2);
 	position: absolute;
 }
-.twitter-post h3{
+.latestsm-post .subtitle{
 	color: #fff;
 }
-.twitter-post-container {
+.latestsm-post-container {
 	margin: 2em 0 2em auto;
 }
-.twitter-post-container iframe {
+.latestsm-post-container iframe {
 	max-height: 500px;
     border-radius: 8px;
 }
 
 	/* Blog Posts */
-.blog-post h3 {
+.blog-post .blogtitle {
 	text-transform: uppercase;
 }
 .blog-post a, .blog-post a:visited, .blog-post a:active { 
@@ -1371,14 +1373,14 @@ p {
 	.hero-text {
 		width: 60%;
 	}
-	.twitter-post-container h3 {
+	.latestsm-post-container .subtitle {
 		font-size: 1.5em;
 	}
 }
 
 /* Our Services Page
 --------------------------------------------- */
-.method h3 {
+.method .service-title {
 	text-align: center;
 }
 
@@ -1426,6 +1428,69 @@ p {
 --------------------------------------------- */
 .team, .ecosystem {
 	margin: 1em auto 2em;
+}
+.partner-graphic-container {
+	width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    position: relative;
+}
+.partner-graphic {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(12, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	max-width: 1000px;
+	max-height: 1000px;
+	position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.big-circle { grid-area: 2 / 2 / 12 / 12; }
+.north { grid-area: 1 / 6 / 3 / 8; }
+.east { grid-area: 6 / 11 / 8 / 13; }
+.south { grid-area: 11 / 6 / 13 / 8; }
+.west { grid-area: 6 / 1 / 8 / 3; }
+.north-east { grid-area: 2 / 10 / 4 / 12;}
+.south-east { grid-area: 10 / 10 / 12 / 12; }
+.south-west { grid-area: 10 / 2 / 12 / 4; }
+.north-west { grid-area: 2 / 2 / 4 / 4; 
+	position: relative;
+	display: inline-block;
+}
+
+.partner-graphic img {
+	width: 100%;
+}
+.ptnlogo img {
+	-webkit-filter: grayscale(1) brightness(1.1);
+	filter: grayscale(1) brightness(1.1);
+	transition: 1s ease;
+}
+
+.ptnlogo img:hover {
+	-webkit-filter: none;
+	filter: none;
+	transform: scale(1.2);
+}
+.tooltiptext {
+	position: absolute;
+	opacity: 0%;
+	text-align: center;
+	z-index: 1;
+	top: 70%;
+	transition: 1s ease;
+	background: #fff;
+	padding: 4px;
+	border: solid 1px rgba(53, 53, 53, 0.3);
+	border-radius: 4px;
+}
+
+.north-west:hover .tooltiptext{
+	opacity: 100%;
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -1476,6 +1541,9 @@ p {
 		display: flex;
     	width: 50%;
 		justify-content: center;
+	}
+	.partner-graphic-container {
+		padding-top: 65%; /* 1:1 Aspect Ratio */
 	}
 	.ecosystem-img img {
 		max-height: 350px;
@@ -1544,7 +1612,7 @@ body.blog .site-main, body.archive .site-main, body.search .site-main {
 	width: 80%;
 	padding: 0 2em;
 }
-.entry-heading h2 a {
+.entry-heading a {
 	color: #353535;
 	text-transform: uppercase;
 }
@@ -1841,6 +1909,7 @@ body.blog .site-main, body.archive .site-main, body.search .site-main {
 }
 .sm-nav ul li a {
 	color: transparent;
+	font-size: 2em;
 	width: 100%;
     height: 100%;
 }
@@ -1912,10 +1981,10 @@ body.blog .site-main, body.archive .site-main, body.search .site-main {
 	background: #353535;
 	margin-top: 5em;
 }
-footer p, footer a, footer h5 {
+footer p, footer a, footer .sml-title {
 	color: #fff;
 }
-footer h5 {
+footer .sml-title {
 	font-family: 'Montserrat-Bold';
 	font-size: 1em;
 	margin:1em 0 0.5em;

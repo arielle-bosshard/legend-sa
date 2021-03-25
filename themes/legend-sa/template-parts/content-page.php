@@ -11,8 +11,8 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	<?php echo '<h2>'. get_the_category( $id )[0]->name .'</h2>'; ?>
+	<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+	<?php echo '<p class="subtitle">'. get_the_category( $id )[0]->name .'</p class="subtitle">'; ?>
 	<div class="entry-content">
 		<?php
 		the_content();
