@@ -158,6 +158,7 @@ function legend_sa_scripts() {
 
 	wp_enqueue_script( 'legend-sa-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'legend-sa-customiser', get_template_directory_uri() . '/js/customizer.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'legend-sa-iframeplayer', get_template_directory_uri() . '/js/iframeplayer.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

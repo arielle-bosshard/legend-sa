@@ -82,7 +82,7 @@
 				</div>
 				<div class="youtube-lastest-vid quarter-width">
 					<p class="sml-title">Latest Video</p>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/TWkcj6gKoMk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="youtube-player" data-id="TWkcj6gKoMk"></div>
 				</div>
 			</section>
 			<div class="section-separator"></div>
@@ -91,7 +91,7 @@
 					<a href="/documents/privacy_policy_legend.pdf" >Privacy Policy</a>
 				</div>
 				<div class="copyright">
-					<p>© 2021 Legend SA - Developed by <a href="https://www.bossarielle.com">Boss.Arielle</a> and <a href="https://www.behance.net/gabrielcnog">Gabriel Nogueira</a>
+					<p>© 2021 Legend SA - Developed by <a href="https://www.bossarielle.com" target="_blank">Boss.Arielle</a> and <a href="https://www.behance.net/gabrielcnog" target="_blank">Gabriel Nogueira</a>
 				</div>
 				<div class=footer-sm-menu>
 					<nav class="social-media-navigation sm-nav" role="navigation">
